@@ -1,9 +1,10 @@
 import React from 'react';
 
-const EmpleadoAvatar = () => {
+
+const EmpleadoAvatar = ({avatar}) => {
     return (
-        <div className='mx-2 mx-md-3'>
-            <img src="" alt="Avatar" />
+        <div className='mx-md-3'>
+            <img className='avatar' src={avatar} alt="Avatar" />
         </div>
     );
 };

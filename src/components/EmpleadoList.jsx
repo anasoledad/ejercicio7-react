@@ -1,12 +1,14 @@
-import React from "react";
-import ListGroup from "react-bootstrap/ListGroup";
-import EmpleadoRow from "./EmpleadoRow";
+import React from 'react';
+import { ListGroup } from 'react-bootstrap';
+import EmpleadoRow from './EmpleadoRow';
 
-const EmpleadoList = () => {
+const EmpleadoList = ({ empleados }) => {
   return (
     <div>
       <ListGroup>
-        <EmpleadoRow></EmpleadoRow>
+        {empleados.map((empleado) => (
+          <EmpleadoRow empleado={empleado} key={empleado.id} />
+        ))}
       </ListGroup>
     </div>
   );

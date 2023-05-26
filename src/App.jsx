@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import EmpleadoList from "./components/EmpleadoList";
 import { Col, Container } from "react-bootstrap";
 
-let empleado = [
+let empleados = [
   {
     id: 1,
     fullName: "Laya Dueñas",
@@ -72,15 +72,13 @@ let empleado = [
 function App() {
   return (
     <>
-      <Container className="mainPage">
-        <h1 className="text-center pt-5">Lista de empleados</h1>
+      <Container className="mainPage mb-4">
+        <h1 className="text-center pt-5 display-3">Lista de empleados</h1>
         <div className="d-flex justify-content-center">
-          <Col sm={9} md={6} lg={5}>
-            <EmpleadoList></EmpleadoList>
+          <Col sm={9} md={7} lg={6}>
+            <EmpleadoList empleados={empleados} />
           </Col>
-            
         </div>
-        
       </Container>
       <footer className="bg-dark text-light text-center py-4">
         <p>&copy; Todos los derechos reservados</p>
